@@ -1,0 +1,153 @@
+/* pages/tucao/tucao.wxss */
+.body{
+margin: 0;
+padding:0;
+width:100%;
+height:100%;
+}
+.claer{clear: both}
+.list_view{
+  width:700rpx;
+  padding:10rpx 25rpx;
+  font-size:35rpx;
+  border-bottom: 1px solid #ccc;
+}
+.list_text{
+}
+.list_bar{
+  padding: 20rpx 10rpx;
+}
+.icon{
+  width:50rpx;
+  height: 50rpx;
+  margin:5rpx 20rpx;
+}
+.smile{
+  float: left;
+  line-height: 60rpx;
+}
+.smile text{
+  height:50rpx;
+  line-height:50rpx;
+}
+.cry{
+  float:left;
+  line-height: 60rpx;
+  margin-left: 40rpx;
+  }
+.cry text{
+  height:50rpx;
+  line-height:50rpx;
+}
+.share{
+  float:right;
+  line-height: 60rpx;
+  margin-left: 40rpx;
+}
+.share text{
+  height:50rpx;
+  line-height:50rpx;
+}
+.bar_view{
+  float: left;
+  color: #757272;
+}
+.hide_img{
+  width: 110rpx;
+  height: 110rpx;
+  border-radius:50%;
+}
+.user_view{
+  float: left;
+}
+.user_view text{
+  height: 110rpx;
+  line-height: 110rpx;
+}
+.hide_img_view{
+  float: left;
+  margin-right: 40rpx;
+}
+.reload {
+position:fixed;
+bottom:80rpx;
+right:60rpx;
+background:#fff;
+border-radius:50%;
+/* border:1px solid #ccc; */
+width:90rpx;
+height:90rpx;
+}
+.reload_icon{
+  width: 80rpx;
+  height: 80rpx;
+}
+.share_btn {
+  background: url('https://static.phpshiti.top/blog/icon/share.png');
+  background-repeat:no-repeat; background-size:100% 100%; 
+  -moz-background-size:100% 100%; 
+  width:50rpx;
+  height: 50rpx;
+  margin:5rpx 20rpx;
+}
+.top_view_height{
+   height: 83rpx;
+   width: 100%;
+}
+.top_view{
+  width: 100%;
+  margin-bottom: 10rpx;
+  height: 70rpx;
+  line-height:70rpx;
+  color: #000;
+  background: #f9f9f9;
+  position: fixed;
+  z-index: 999;
+  border-bottom: 1px solid #ccc;
+}
+.top_view view {
+  float: left;
+  width: 33%;
+  text-align: center;
+}
+.is_chek{
+  color: #1894ff;
+}
+.img_user_name {
+color:#6a6a6a;
+font-size:26rpx;
+padding: 5rpx 0rpx;
+}
+.container{
+  padding: 10rpx;
+}
+.nodata{
+   position: fixed;
+    height: 100%;
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;/*垂直居中*/
+    justify-content: center;/*水平居中*/
+    background: #fff;
+}
+.loding_img{
+  width: 100rpx;
+  height: 100rpx;
+}
+.one_img{
+  width: 100%;
+  padding:2rpx;
+}
+.two_img{
+  width: 310rpx;
+  height: 310rpx;
+  padding:20rpx;
+  box-sizing: content-box;
+}
+.more_img{
+  width: 214rpx;
+  height: 214rpx;
+  padding:10rpx;
+  box-sizing: content-box;
+}

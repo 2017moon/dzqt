@@ -1,0 +1,49 @@
+<!--pages/mycenter/mycenter.wxml-->
+<view class='body_view'>
+<!-- 授权提醒 -->
+<view wx:if="{{!is_auth}}" class="container nodata">
+    <view class='nodata_view'>
+      <view class='auth_title'>微信授权登录</view>
+      <view class='auth_img_view'>
+        <image class='auth_img' src='/images/user_d.png'></image>
+      </view>
+      <view class='auth_text'>您尚未授权登录，请先授权登录体验完整功能</view>
+      <button class='auth_btn' open-type="getUserInfo" bindgetuserinfo='getUserInfo'>授权登录</button>
+    </view>
+</view>
+<!-- 个人中心 -->
+<view wx:if="{{is_auth}}">
+<!-- 个人信息 -->
+ <view class='user_head_img_view'>
+    <image class='auth_img' src="{{userInfo['avatarUrl']}}"></image>
+    <view> <text class='nikename'>{{userInfo['nickName']}}</text></view>
+ </view>
+ <!-- 分割线 -->
+ <view class='d_line'></view>
+<!-- 个人中心功能列表 -->
+ <view class='list_view' wx:if="{{!data.lenght}}">
+  <view class='list' wx:for="{{data}}" bindtap='goNewPage' data-url="{{item.goPage}}">
+   <image class="list_icon" src="{{item.icon}}"></image>
+   <text class='list_text'>{{item.title}}  </text>
+  </view>
+   <!-- 分割线 -->
+  <view class='d_line'></view>
+ </view>
+
+ <!-- 次要信息列表 -->
+ <view class='list_view'>
+  <!-- <view class='list' bindtap='goNewPage' data-url='/pages/more/morexcx'>
+   <image class="list_icon" src='/images/more.png'></image><text class='list_text'>更多小程序</text>
+  </view> -->
+  <view class='list' bindtap='goNewPage' data-url='/pages/about/about'>
+   <image class="list_icon" src='/images/about.png'></image>
+   <text class='list_text'>关于我们</text>
+  </view>
+  <view class='list list_btn_view'>
+   <image class="list_icon " src='/images/yijian.png'></image>
+    <button class='list_btn' open-type="contact" show-message-card="true">建议反馈</button>
+  </view>
+ </view>
+</view>
+
+</view>

@@ -1,0 +1,81 @@
+
+<!--标题  -->
+<view class="top_view">
+  <view class="{{this_tap == 1 ? 'is_chek' : ''}}" data-this_tap="1" bindtap="this_tap">推荐</view>
+  <view class="{{this_tap == 2 ? 'is_chek' : ''}}" data-this_tap="2" bindtap="this_tap">最新</view>
+  <view class="{{this_tap == 3 ? 'is_chek' : ''}}" data-this_tap="3" bindtap="this_tap" >最热</view>
+  <!-- <view class="{{this_tap == 4 ? 'is_chek' : ''}}" data-this_tap="4" bindtap="this_tap" >趣图</view> -->
+  <view class="claer top_view_height"></view>
+</view>
+<view class="claer top_view_height"></view>
+<!-- 加载 -->
+<view class="container nodata" wx:if="{{loding}}">
+    <image class='loding_img' src='/images/loding_juhua.gif'></image>
+</view>
+<!-- 内容 -->
+<view wx:if="{{!loding}}">
+<view class="body" >
+  <view  class="list_view" wx:for="{{list}}" wx:for-item='info' bindtap="detail" data-id="{{info.id}}">
+      <view class='hide'>
+        <view class='hide_img_view'>
+          <image class="hide_img" mode='aspectFit' src="{{info.headimgurl}}"></image> 
+        </view>
+        <!--  -->
+        <view class='user_view'  >
+          <view class="img_user_name">{{info.user_name}}</view>
+          <view class="img_title" wx:if='{{info.article_content.images.length > 0}}'>{{info.article_title}}</view>
+        </view>
+        <!--  -->
+        <view class="claer"></view>
+      </view>
+
+      <view class='list_text' wx:if="{{info.article_content.text}}">
+      <text>{{info.article_content.text}} </text>
+      </view>
+      <view class='list_text' wx:if='{{info.article_content.images.length > 0}}'>
+        <image wx:for="{{info.article_content.images}}" wx:for-item='image'  mode="aspectFill" class="{{info.article_content.images.length > 2 ? 'more_img' : (info.article_content.images.length > 1 ? 'two_img' : 'one_img')}}" src="{{image}}" bindtap='showBigImg' data-images = "{{info.article_content.images}}" data-img="{{image}}"></image>
+      </view>
+      <view class="list_bar">
+        <view class='smile'>
+          <view class="bar_view" bindtap="isLike" data-id='{{info.id}}' data-like="{{info.like}}" data-type="1" data-index="{{index}}">
+            <image class='icon' src='{{info.like ? "/images/smile_d.png" : "/images/smile.png"}}' mode='aspectFit' ></image>
+          </view>
+          <view class="bar_view">
+          <text>{{info.article_like_num}}</text>
+          </view>
+        </view>
+
+        <view class='cry'>
+          <view class="bar_view" bindtap="isLike" data-id='{{info.id}}' data-like="{{info.unlike}}" data-type="2" data-index="{{index}}">
+            <image class='icon' src='{{info.unlike ? "/images/cry_d.png" : "/images/cry.png"}}' mode='aspectFit' ></image>
+          </view>
+          <view class="bar_view">
+            <text>{{info.article_unlike_num}}</text>
+          </view>
+        </view>
+
+      <view class='share'>
+          <view class="bar_view" bindtap="share" data-id='{{info.id}}' data-like="{{info.unlike}}" data-type="2" data-index="{{index}}">
+          <button open-type="share" data-id="{{info.id}}" data-title="{{info.article_title}}" data-img="{{info.article_content.images || Array()}}" class='share_btn'></button>
+            <!-- <image class='icon' src='/images/share.png' mode='aspectFit' ></image> -->
+          </view>
+          <view class="bar_view">
+            <!-- <text>{{info.article_unlike_num}}</text> -->
+          </view>
+        </view>
+      </view>
+      <view class='claer'></view>
+  </view>
+
+  <view class='reload' bindtap="reload">
+    <image class='reload_icon'  src='/images/reload.png' mode='aspectFit'></image>
+  </view>
+  <view class='claer'></view>
+  <view  wx:if="{{data_loding}}" style="text-align: center;padding: 20rpx;">
+    <image style="width: 150rpx;height: 30rpx;" src="/images/loding.gif"></image>
+  </view>
+  <view wx:if="{{no_data}}" style="text-align: center;padding: 20rpx; color:#ccc; font-size:22rpx">
+    <text>已经到底了哦~~~</text>
+  </view>
+</view>
+</view>

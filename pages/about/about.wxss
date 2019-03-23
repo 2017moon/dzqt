@@ -1,0 +1,29 @@
+.auth_img_view{
+  width:100%;
+  text-align:center;
+  padding-bottom:25rpx;
+}
+.auth_img {
+  width:150rpx;
+  height:150rpx;
+  background:#f0f0f0;
+  border-radius:50%;
+  text-align:center;
+  margin:auto;
+}
+.user_head_img_view{
+    width:100%;
+    text-align:center;
+    margin: 30rpx auto;
+}
+.about_view{
+  width: 750rpx;
+  text-indent: 2em;
+  font-size: 26rpx;
+  line-height: 52rpx; 
+  font-weight: 350;
+  min-height: 600rpx;
+}
+.about_text_view {
+  padding: 10rpx 30rpx;
+}

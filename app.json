@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/tucao/tucao",
+    "pages/mycenter/mycenter",
+    "pages/about/about",
+    "pages/more/morexcx"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/tucao/tucao",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_d.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/mycenter/mycenter",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user_d.png",
+        "text": "我"
+      }
+    ],
+    "selectedColor": "#2196f3"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "搞笑段子",
+    "navigationBarTextStyle": "black"
+  }
+}

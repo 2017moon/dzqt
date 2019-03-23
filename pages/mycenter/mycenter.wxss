@@ -1,0 +1,95 @@
+/* pages/mycenter/mycenter.wxss */
+.container{
+  padding: 10rpx;
+}
+.nodata{
+   position: fixed;
+    height: 100%;
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;/*垂直居中*/
+    justify-content: center;/*水平居中*/
+    background: #00000080;
+}
+.nodata_view{
+  width:600rpx;
+  height:600rpx;
+  background:#fff;
+  border-radius:10rpx;
+}
+.auth_btn{
+  margin-top:20rpx;
+}
+.auth_title{
+  width: 500rpx;
+  margin: 45rpx auto;
+  text-align:center;
+  padding-bottom:20rpx;
+  border-bottom: 1px solid #ccc; 
+}
+.auth_text{
+  width: 500rpx;
+  text-align:center;
+  margin: auto;
+}
+.auth_img_view{
+  width:100%;
+  text-align:center;
+  padding-bottom:25rpx;
+}
+.auth_img {
+  width:150rpx;
+  height:150rpx;
+  background:#f0f0f0;
+  border-radius:50%;
+  text-align:center;
+  margin:auto;
+}
+.user_head_img_view{
+    width:100%;
+    text-align:center;
+    margin: 30rpx auto;
+}
+.nikename{
+
+}
+.list_view{
+  font-size: 30rpx;
+}
+.list{
+  padding: 25rpx 40rpx 25rpx 40rpx;
+  border-bottom:1px solid #f0f0f0;
+  align-items:center;/*垂直居中*/
+  height: 54rpx;
+  display: flex;
+}
+.list_text{
+  line-height: 54rpx;
+}
+.list_icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+  z-index: 2;
+}
+.d_line{
+  width:750rpx;
+  background:#f0f0f0;
+  height:18rpx;
+}
+.list_btn_view{
+  display: flex;
+}
+.list_btn {
+  border: none;
+  background: #fff;
+  line-height:45rpx;
+  margin-left: -25rpx;
+  font-size: 30rpx;
+}
+.list_btn::after {
+  border: none;
+  color: #000;
+  font-size: 30rpx;
+}

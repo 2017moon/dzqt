@@ -1,0 +1,46 @@
+/* pages/more/morexcx.wxss */
+.xcx_view{
+  width:640rpx;
+  min-height:240rpx;
+  float: left;
+  text-align: center;
+  border: 1px solid #ccc;
+  margin: 15rpx 25rpx;
+  border-radius: 10rpx;
+  padding: 30rpx;
+}
+.xcx_img{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+.img_view{
+  padding: 20rpx 20rpx 10rpx 20rpx;
+  float:left;
+}
+.title_view{
+  padding: 10rpx;
+  margin-left: 10rpx;
+  text-align:left;
+
+}
+.xcx_describe_view{
+  font-size: 28rpx;
+  text-align: left;
+  /* margin-left: 40rpx;  */
+  padding: 0rpx 10rpx;
+}
+.xcx_describe{
+  width: 630rpx;
+  display: -webkit-box;
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.title_head_view{
+  padding: 10rpx  0rpx;
+}

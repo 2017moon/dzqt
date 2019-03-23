@@ -1,0 +1,25 @@
+<!--pages/more/morexcx.wxml-->
+<view class='more_view'>
+  <!-- <view class='title_head_view'><text>更多小程序</text></view> -->
+  <!-- 小程序列表 -->
+  <view class='more_list'>
+      <!-- 小程序块 -->
+      <view class='xcx_view' wx:for="{{list}}"  bindtap='showBigImg' wx:for-item="info" data-img="{{info.qr_code}}" >
+        <view class='img_view'>
+          <image class='xcx_img' src='{{info.head_img}}'></image>
+        </view>
+        <view class='title_view'>
+         <text class='xcx_title'>{{info.title}}</text>
+        </view>
+         <view class='xcx_describe_view'>
+         <text class=''>{{info.date}}</text>
+        </view>
+        <view class='xcx_describe_view'>
+         <text class='xcx_describe'>
+         {{info.xcx_describe}}
+         </text>
+        </view>
+      </view>
+
+  </view>
+</view>

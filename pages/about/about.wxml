@@ -1,0 +1,26 @@
+ <!-- logo -->
+ <view class='user_head_img_view'>
+    <image class='auth_img' src='/images/user_d.png'></image>
+    <view> <text class='nikename'>段子搞笑趣图</text></view>
+ </view>
+ <!-- 关于我们 -->
+ <view class='about_view'>
+    <view class='about_text_view'>
+      <text>段子搞笑趣图是为了方便广大网友浏览查阅段子与趣图的微信小程序</text>
+    </view>
+    <view class='about_text_view'>
+      <text>如果您想要投稿有趣的动图，请联系客服进行投稿，经过审核之后我们会及时上线与广大网友分享</text>
+    </view>
+    <view class='about_text_view'>
+      <text>段子搞笑趣图的内容绝大多数来源于网络，且未标记不可转载，如有侵犯版权，请联系客服并提供相关证明，核实之后我们将于3日之内删除</text>
+    </view>
+ </view>
+ <!-- 推广 -->
+<view class='about_view'>
+  <view bindtap='copyContent' data-content='leiliang019'>
+    微信公众号：<text>lszypai</text>(点击复制)
+  </view>
+  <view bindtap='copyContent' data-content='qq1581876871'>
+    客服 微信：<text>sr_930127</text>(点击复制)
+  </view>
+</view>
